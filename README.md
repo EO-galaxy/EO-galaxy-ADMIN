@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# EO Galaxy 어드민 웹 사이트
+배포 링크 : https://eo-galaxy-admin.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🤔 대표 트러블 슈팅
+보다 다양한 트러블 슈팅은 [Issues 페이지](https://github.com/EO-galaxy/EO-galaxy-ADMIN/issues)에서 확인이 가능합니다.
 
-Currently, two official plugins are available:
+## 💻 EO Galaxy 어드민 화면
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**로그인 페이지**     
+<img width="700" alt="image" src="https://github.com/EO-galaxy/EO-galaxy-ADMIN/assets/97885933/6d7bddce-b609-40ee-a2c3-0903584a39ef">
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+**대시보드 페이지**    
