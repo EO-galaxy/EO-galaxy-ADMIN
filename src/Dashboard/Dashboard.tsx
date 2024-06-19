@@ -227,6 +227,13 @@ const Dashboard: React.FC = () => {
 export default Dashboard;
 
 const TableStyles = css`
+  margin-top: 66.2px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   table {
     th,
     td {

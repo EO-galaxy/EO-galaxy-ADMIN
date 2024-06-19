@@ -24,7 +24,7 @@ const HeaderStyles = css`
   width: 100vw;
   background-color: var(--bg-secondary);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
