@@ -34,7 +34,7 @@ function SignIn() {
       return;
     }
 
-    if (user[1].username === username && user[1].password === password) {
+    if (user[0].username === username && user[0].password === password) {
       setError("");
       navigate("/dashboard");
     } else {
