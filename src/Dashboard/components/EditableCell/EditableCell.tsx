@@ -9,8 +9,7 @@ interface EditableCellProps {
   updateMyData: (index: number, id: string, value: string) => void;
 }
 
-const inputStyles = css`
-  height: 45px;
+const textAreaStyles = css`
   padding: 8px;
   border-radius: 4px;
   font-size: 18px;
@@ -19,7 +18,6 @@ const inputStyles = css`
     outline: none;
   }
   @media (max-width: 768px) {
-    height: 22px;
     font-size: 10px;
   }
 `;
@@ -32,7 +30,7 @@ const EditableCell: React.FC<EditableCellProps> = ({
 }) => {
   const [value, setValue] = useState(initialValue);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setValue(e.target.value);
   };
 
@@ -45,8 +43,8 @@ const EditableCell: React.FC<EditableCellProps> = ({
   }, [initialValue]);
 
   return (
-    <input
-      css={inputStyles}
+    <textarea
+      css={textAreaStyles}
       value={value}
       onChange={onChange}
       onBlur={onBlur}

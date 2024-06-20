@@ -118,13 +118,10 @@ const Dashboard: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // 메시지가 변경될 때마다 타이머 설정
     if (tableMessage) {
       const timer = setTimeout(() => {
         setTableMessage("");
       }, 3000);
-
-      // Clean-up 함수: 컴포넌트가 unmount 되거나 tableMessage가 변경될 때 타이머 해제
       return () => clearTimeout(timer);
     }
   }, [tableMessage]);
@@ -146,22 +143,22 @@ const Dashboard: React.FC = () => {
       {
         id: "actions",
         Cell: ({ row }: CellProps<Translation>) => (
-          <div style={{ display: "flex", gap: "3px" }}>
+          <>
             {row.index === data.length - 1 ? (
               <button onClick={() => upsertRow(row.index)} css={ButtonStyles}>
                 추가하기
               </button>
             ) : (
-              <>
+              <div style={{ display: "flex", gap: "3px" }}>
                 <button onClick={() => upsertRow(row.index)} css={ButtonStyles}>
                   저장하기
                 </button>
                 <button onClick={() => deleteRow(row.index)} css={ButtonStyles}>
                   삭제하기
                 </button>
-              </>
+              </div>
             )}
-          </div>
+          </>
         ),
       },
     ],
@@ -237,7 +234,6 @@ const TableStyles = css`
   table {
     th,
     td {
-      margin: 0;
       padding: 10px;
       border-bottom: 1px solid black;
       border-right: 1px solid black;
@@ -245,6 +241,8 @@ const TableStyles = css`
       color: black;
       font-size: 18px;
       font-weight: 800;
+      text-align: center;
+      vertical-align: middle;
 
       :last-child {
         border-right: 0;
@@ -268,8 +266,8 @@ const TableStyles = css`
 `;
 
 const ButtonStyles = css`
-  width: 100%;
-  height: 60px;
+  /* width: 100%; */
+  height: 40px;
   padding: 10px;
   background-color: var(--bg-primary);
   color: var(--text-tertiary);
