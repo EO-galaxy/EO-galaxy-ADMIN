@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Pretendard", serif;
+  font-display: fallback;
+  src: url("/fonts/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   /* 배경색 */
   --bg-primary: #02f798;
@@ -15,6 +23,15 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+html,
+body {
+  font-family: "Pretendard", sans-serif !important;
+}
+
+button {
+  font-family: "Pretendard", sans-serif !important;
+}
 
 html,
 body,
